@@ -30,7 +30,7 @@
 ## Before You Start:
 
 - Read our [contribution](https://github.com/tomorrowbiostasis/tomorrowbiostasis/blob/main/CONTRIBUTING.md) guidance to gain better understanding on how to be a part of the Biostasis development community.
-- Please make sure to visit the [Biostasis-Cloud-infrastructure](https://github.com/tomorrowbiostasis/Biostasis-Cloud-infrastructure) repositroy and create your own cloud and external services. **Otherwise, you won't be able to run the application properly (you need your own .env credentials).**
+- Please make sure to visit the [Biostasis-Cloud-infrastructure](https://github.com/tomorrowbiostasis/Biostasis-Cloud-infrastructure) repository and create your own cloud and external services. **Otherwise, you won't be able to run the application properly (you need your own .env credentials).**
 - If you want to participate in the development of the automated pulse system, you need to own a smart watch to be able to test your implementation or new feature.
 
 ## Introduction:
@@ -267,10 +267,10 @@ The Time-Based Trigger operates as follows:
 
 This section outlines the structure and organization of the project repository, including its various directories and files.
 
-- **Assets:** This directory contains icons, components, and static images used in the project.
-- **Components:** The components directory contains shared components that can be reused throughout the application.
-- **Constants:** The constants directory includes files that contain constant values used in the project.
-- **Hooks:** The hooks directory contains custom hooks that encapsulate reusable logic and can be utilized across different components.
+- **assets:** This directory contains icons, components, and static images used in the project.
+- **components:** The components directory contains shared components that can be reused throughout the application.
+- **constants:** The constants directory includes files that contain constant values used in the project.
+- **hooks:** The hooks directory contains custom hooks that encapsulate reusable logic and can be utilized across different components.
 - **i18n:** The i18n directory consists of localization files and configurations that enable internationalization and localization support in the application.
 - **models:** The models directory holds type definitions or interfaces that describe the structure and shape of the data used within the project.
 - **navigators:** The navigators directory contains stacks and navigator components responsible for handling navigation between different screens or sections of the application.
@@ -282,7 +282,9 @@ This section outlines the structure and organization of the project repository, 
 - **utils:** The utils directory contains utility functions or helper modules that provide common functionalities used throughout the project. These utilities serve various purposes and are typically self-explanatory in nature.
 - **services**: The services directory houses various services responsible for specific functionalities within the app. Each service performs a specific task and encapsulates the related logic and functionality.
 
-Each directory contains a README file to document the modules and files inside that directory. Please note that this list may not be exhaustive, but it gives an overview of the services available in the src/services directory.
+Each directory contains a README file to document the modules and files inside that directory.
+
+Please note that this list may not be exhaustive, but it gives an overview of the services available in the src/services directory.
 
 ## State Management:
 
@@ -328,7 +330,7 @@ The process for the Android system is a little bit more complicated. We need a d
 
 1. The application uses GoogleFit and HealthKit APIs so make sure to have (Android) GoogleFit - (iOS) Health accounts before using the application.
 
-2. Make sure that your smart device is connected to those accounts and that you can see your health data. Some smart watches do not send your health data directly to GoogleFit/HealthKit, So you  always need to sync your health data with GoogleFit/Health apps.
+2. Make sure that your smart device is connected to those accounts and that you can see your health data. Some smart watches do not send your health data directly to GoogleFit/HealthKit, So you always need to sync your health data with GoogleFit/Health apps.
 
 3. If you are planning to use short periods (3-6-9) hours. Please, make sure:
 
