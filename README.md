@@ -99,7 +99,7 @@ After you navigate to the project directory. Install all dependencies for the ap
 ---
 
 1.  Ensure that [Java](https://www.java.com/) installed on your machine.
-2.  Using android studio open the application's android folder `~/biostasis-frontend/android`. Android Studio will start building your application automatically.
+2.  Using android studio open the application's android folder `~/Biostasis-FrontEnd/android`. Android Studio will start building your application automatically.
 3.  Wait until android studio finishes building your application. Then, set up your Android device:
     - **Android studio emulator**: follow this [**Link**](https://developer.android.com/studio/run/managing-avds) to learn how to create and manage virtual devices.
     - **Physical andorid device**: follow this [**Link**](https://developer.android.com/studio/run/device) to learn how to run apps on hardware devices. There are a lot of methods and instructions for every operating system.
@@ -160,13 +160,13 @@ You can run the application outside android studio.
 
         sudo gem install cocoapods
 
-2.  Navigate to the project's ios folder using terminal `cd ~/biostasis-frontend/ios`, you will see a ruby file called `Podfile`. Then, install pods into the project by typing in the terminal:
+2.  Navigate to the project's ios folder using terminal `cd ~/Biostasis-FrontEnd/ios`, you will see a ruby file called `Podfile`. Then, install pods into the project by typing in the terminal:
 
         pod install
 
     or (For m1 chip)
 
-        arch -x86_64 pod install
+        arch -x86_64 pod install (TODO(remonechev): Is this still correct?)
 
 3.  Once completed, there will be a message that says:
 

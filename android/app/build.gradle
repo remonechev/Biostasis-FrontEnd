@@ -230,11 +230,11 @@ android {
     productFlavors {
         development {
             resValue "string", "app_name", "Biostasis dev"
-            applicationId "app.biostasis"
+            applicationId "app.biostasis.rme"
         }
         production {
             resValue "string", "app_name", "Biostasis"
-            applicationId "app.biostasis"
+            applicationId "app.biostasis.rme"
         }
     }
 
