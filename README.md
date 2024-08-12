@@ -160,13 +160,14 @@ You can run the application outside Android Studio.
 
         sudo gem install cocoapods
 
-2.  Navigate to the project's iOS folder using terminal `cd ~/biostasis-frontend/ios`, you will see a Ruby file called `Podfile`. Then, install pods into the project by typing in the terminal:
+2.  Navigate to the project's ios folder using terminal `cd ~/Biostasis-FrontEnd/ios`, you will see a ruby file called `Podfile`. Then, install pods into the project by typing in the terminal:
+
 
         pod install
 
     or (For Apple Silicon chip)
 
-        arch -x86_64 pod install
+        arch -x86_64 pod install (TODO(remonechev): Is this still correct?)
 
 3.  Once completed, there will be a message that says:
 
