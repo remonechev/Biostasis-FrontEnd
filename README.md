@@ -4,15 +4,15 @@
 [![platform](https://img.shields.io/badge/platform-IOS%20%7C%20Android-lightgrey)]()
 [![react-native](https://img.shields.io/badge/react%20native-0.67.2-blue)]()
 
-## Table of content:
+## Table of Contents:
 
 - [Before You Start](#before-you-start)
 - [Introduction](#introduction)
-- [installation](#installation)
-  - [Pre-preparation](#pre-preparation)
+- [Installation](#installation)
+  - [Preparation](#preparation)
   - [Let's Start](#lets-start)
     - [Android](#android)
-    - [IOS](#ios)
+    - [iOS](#ios)
 - [Connect To Server](#connect-to-server)
 - [Automated Emergency System](#automated-emergency-system)
   - [Pulse-Based Trigger](#-pulse-based-trigger)
@@ -22,20 +22,20 @@
   - [Services](#services)
   - [State Management](#state-managment)
 - [Setup wearables](#setup-wearables)
-  - [IOS](#ios-1)
+  - [iOS](#ios-1)
   - [Android](#android-1)
 - [Disclaimer](#disclaimer)
 - [License](#license)
 
 ## Before You Start:
 
-- Read our [contribution](https://github.com/tomorrowbiostasis/tomorrowbiostasis/blob/main/CONTRIBUTING.md) guidance if you did not already to gain better understanding on how to be part of biostasis community.
-- Please make sure to visit the [Biostasis-Cloud-infrastructure](https://github.com/tomorrowbiostasis/Biostasis-Cloud-infrastructure) and create your own cloud and external services. **Otherwise, you can't run the application properly (you need your own .env credentials).**
-- if you want to participate into the automated pulse system development, you need to own a smart watch to be able to test your implementation or new feature.
+- Read our [contribution](https://github.com/tomorrowbiostasis/tomorrowbiostasis/blob/main/CONTRIBUTING.md) guidance to gain better understanding on how to be a part of the Biostasis development community.
+- Please make sure to visit the [Biostasis-Cloud-infrastructure](https://github.com/tomorrowbiostasis/Biostasis-Cloud-infrastructure) repository and create your own cloud and external services. **Otherwise, you won't be able to run the application properly (you need your own .env credentials).**
+- If you want to participate in the development of the automated pulse system, you need to own a smart watch to be able to test your implementation or new feature.
 
 ## Introduction:
 
-This documentation is for the frontend(Mobile App) part of the Biostasis application. Here you will find all the information to build and install the application on your machine and run it on both development/production environments. A short summary of the main feature of our application and the services that we are using to implement and execute the app.
+This documentation is for the frontend (Mobile App) part of the Biostasis application. Here you will find all the information to build and install the application on your machine and run it on both development/production environments. Included in this documentation is a short summary of the main features of our application and the services that we are using to implement and execute the app.
 
 ## Tech Stack:
 
@@ -58,31 +58,31 @@ The Biostasis mobile application is built using the following technologies:
 
 In combination, these technologies provide a powerful and scalable frontend architecture for our application.
 
-## installation:
+## Installation:
 
-### Pre-preparation:
+### Preparation:
 
 There are multiple steps you should take before you start the installation stage:
 
-1.  If you want to participate in the development of our app on the Android platform, Make sure that you have [Android Studio](https://developer.android.com/studio) installed on your machine. Then, [Set up the Android 14 SDK](https://developer.android.com/about/versions/14/setup-sdk).
-2.  If you have a Mac device and want to participate in the development of our app on the IOS platform, make sure to install [Xcode](https://developer.apple.com/xcode/).
-3.  Make sure that you have [node.js](https://nodejs.org/) installed.
-4.  we use [yarn](https://yarnpkg.com/) as package manager for node.js, so make sure to install yarn using this command:
+1.  If you want to participate in the development of our app on the Android platform, Make sure that you have [Android Studio](https://developer.android.com/studio) installed on your machine. Then, set up the [Android 14 SDK](https://developer.android.com/about/versions/14/setup-sdk).
+2.  If you have a Mac device and want to participate in the development of our app on the iOS platform, make sure to install [Xcode](https://developer.apple.com/xcode/).
+3.  Make sure that you have [Node.js](https://nodejs.org/) installed.
+4.  We use [yarn](https://yarnpkg.com/) as package manager for node.js, so make sure to install yarn using this command:
 
         npm install --global yarn
 
 5.  You need to have a [Firebase](https://firebase.google.com/) account, if not, please create a new account. Then, create new project under the name `Biostasis`:
 
-    - First, pick the platform that you want to work on (Android - IOS).
+    - First, pick the platform that you want to work on (Android or iOS).
     - Then, add a new app for that platform.
     - Make sure that the package name for your app is `app.biostasis`
 
       **or else you need to change the local package name inside `build.gradle` file to match your input name.**
 
     - - (Android) Download `google-services.json` file and move it inside `/android/app`.
-      - (IOS) Download `GoogleService-Info.plist` file and move it inside `ios/Biostasis`.
+      - (iOS) Download `GoogleService-Info.plist` file and move it inside `ios/Biostasis`.
     - Ensure to add **Firebase SDK** (instructions provided during the creation of the new app).
-    - - (Android) Ensure that **[Firebase Crashlytics](https://firebase.google.com/docs/crashlytics/get-started?platform=android)** added to your android project.
+    - - (Android) Ensure that **[Firebase Crashlytics](https://firebase.google.com/docs/crashlytics/get-started?platform=android)** added to your Android project.
       - (IOS) Firebase packages are already installed when you install pods so no need to add packages through Xcode.
     - And you are now ready to go 🎉
 
@@ -99,72 +99,72 @@ After you navigate to the project directory. Install all dependencies for the ap
 ---
 
 1.  Ensure that [Java](https://www.java.com/) installed on your machine.
-2.  Using android studio open the application's android folder `~/biostasis-frontend/android`. Android Studio will start building your application automatically.
-3.  Wait until android studio finishes building your application. Then, set up your Android device:
-    - **Android studio emulator**: follow this [**Link**](https://developer.android.com/studio/run/managing-avds) to learn how to create and manage virtual devices.
-    - **Physical andorid device**: follow this [**Link**](https://developer.android.com/studio/run/device) to learn how to run apps on hardware devices. There are a lot of methods and instructions for every operating system.
-4.  ##### Physical Devices:
+2.  Using Android Studio open the application's android folder `~/biostasis-frontend/android`. Android Studio will start building your application automatically.
+3.  Wait until Android Studio finishes building your application. Then, set up your Android device:
+    - **Android Studio emulator**: follow this [**link**](https://developer.android.com/studio/run/managing-avds) to learn how to create and manage virtual devices.
+    - **Physical Android device**: follow this [**link**](https://developer.android.com/studio/run/device) to learn how to run apps on hardware devices. There are a lot of methods and instructions for every operating system.
+      - ##### Physical Devices:
 
-    Once you have your hardware device ready, make sure that the connection is forwarded to the right port (android device port:8081 -> computer port:8081 where metro bundler is running) Either using:
+      Once you have your hardware device ready, make sure that the connection is forwarded to the right port (Android device port:8081 -> computer port:8081 where metro bundler is running) Either using:
 
-    - **adb command:**
+      - **adb command:**
 
-          adb reverse tcp:8081 tcp:8081
+            adb reverse tcp:8081 tcp:8081
 
-    - **chrome dev tool:** [visit this page](https://developer.chrome.com/docs/devtools/remote-debugging/) to learn how to debug Android devices remotly.
+      - **chrome dev tool:** visit [this page](https://developer.chrome.com/docs/devtools/remote-debugging/) to learn how to debug Android devices remotely.
 
-      - Visit `chrome://inspect/#devices`
-      - Click on `Port forwarding`. Then, add a new port:
+        - Visit `chrome://inspect/#devices`
+        - Click on `Port forwarding`. Then, add a new port:
 
-        <table>
-          <tr>
-            <td>Port</td>
-            <td>IP addresses and port</td>
-          </tr>
-          <tr>
-            <td>8081</td>
-            <td>localhost:8081</td>
-          </tr>
-        </table>
+          <table>
+            <tr>
+              <td>Port</td>
+              <td>IP addresses and port</td>
+            </tr>
+            <tr>
+              <td>8081</td>
+              <td>localhost:8081</td>
+            </tr>
+          </table>
 
-      - Make sure `Enable port forwarding` is checked.
-      - Keep the tab open during your development process.
+        - Make sure `Enable port forwarding` is checked.
+        - Keep the tab open during your development process.
 
-5.  Run metro bundler:
+4.  Run metro bundler:
 
         yarn start
 
-6.  Run the application `Run > Run'app'` it will install the application on your Android device and run it automatically. After that, it will take some time until metro bundler finish bundling all project files into one main file.
+5.  Run the application `Run > Run'app'`, this will install the application on your Android device and run it automatically. After that, it will take some time until metro bundler finishes bundling all project files into one main file.
 
 =================================== **Alternatively** ===================================
 
-You can run the application outside android studio.
+You can run the application outside Android Studio.
 
-- Make sure that you have `local.properties` file in your `android` directory (usually this file will be created automatically by android studio). it should contian the path to your android sdk dir.
+- Make sure that you have `local.properties` file in your `android` directory (usually this file will be created automatically by Android Studio). It should contain the path to your Android SDK directory.
 
   - Mac: `sdk.dir = /Users/[username]/Library/Android/sdk`
   - Windows: `sdk.dir=C\:\\Users\\[username]\\AppData\\Local\\Android\\Sdk`
 
-- Add jdk path `org.gradle.java.home=<PATH_TO_JDK_OR_JBR_DIR>` (you can find the path where java is installed) to `gradle.properties` file
+- Add JDK path `org.gradle.java.home=<PATH_TO_JDK_OR_JBR_DIR>` (you can find the path where java is installed) to `gradle.properties` file
 - Run:
 
       yarn android:dev
 
   **_PS: Don't forget to forward to the right port [(step 4)](#physical-devices)._**
 
-### IOS:
+### iOS:
 
 ---
 
-1.  Install [Cocoapods](https://cocoapods.org/) on your mac machine using:
+1.  Install [Cocoapods](https://cocoapods.org/) on your Mac machine using:
 
         sudo gem install cocoapods
 
-2.  Navigate to the project's ios folder using terminal `cd ~/biostasis-frontend/ios`, you will see a ruby file called `Podfile`. Then, install pods into the project by typing in the terminal:
+2.  Navigate to the project's iOS folder using terminal `cd ~/biostasis-frontend/ios`, you will see a Ruby file called `Podfile`. Then, install pods into the project by typing in the terminal:
 
         pod install
 
-    or (For m1 chip)
+    or (For Apple Silicon chip)
 
         arch -x86_64 pod install
 
@@ -172,21 +172,21 @@ You can run the application outside android studio.
 
     > Pod installation complete! There are X dependencies from the Podfile and X total pods installed.
 
-4.  Using Xcode open the application's ios folder `~/biostasis-frontend/ios`. Xcode will start building your application automatically.
-5.  Then, after Xcode finishes building the project, you can run the application. [Visit this page](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device) to learn more about how you can run the application on a simulator or physical device.
+4.  Using Xcode open the application's iOS folder `~/biostasis-frontend/ios`. Xcode will start building your application automatically.
+5.  Then, after Xcode finishes building the project, you can run the application. Visit [this page](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device) to learn more about how you can run the application on a simulator or physical device.
 
 **_PS: if you faced an error with the `Yoga` file just add `|` where the error is mentioned._**
 
 ## Connect To Server:
 
-- If you want to connect the frontend biostasis application to server you need to build the [backend side of the application](https://github.com/tomorrowbiostasis/Biostasis-Backend) and then run the server.
+- If you want to connect the biostasis frontend application to a backend server you need to build the [backend side of the application](https://github.com/tomorrowbiostasis/Biostasis-Backend) and then run the server.
 - The `API_URL` in the `.env.(env-type)` file should match the host that your backend server is running on:
 
   eg. `API_URL="http://localhost:<server-port>"`
 
 - (Physical Devices) You need to forward device's to the server's port [**step4**](#physical-devices).
 
-**PS: You need to replace the `localhost` with your mac's wifi IP Address if you are developing on IOS (`localhost` works on android)**
+**PS: You need to replace the `localhost` with your Mac's WiFi IP Address if you are developing on iOS (`localhost` works on Android)**
 
 ## Automated Emergency System:
 
@@ -200,22 +200,22 @@ There are two types of triggering for the automated emargency system:
 
 This section provides an overview of the Bio-Based Trigger feature implemented in this GitHub repository. The Bio-Based Trigger enables the monitoring of user health by utilizing (heart rate - resting heart rate - movement) data obtained from Google Fit.
 
-### - Activation Process:
+#### Activation Process:
 
-To activate the Bio-Based Trigger, follow these steps:
+To activate the Bio-Based Trigger in the app, follow these steps:
 
 1. Mark the additional checks, including the (Google Fit - HealthKit) check, which initiates an authentication modal.
 2. Other checks, such as the companion app connection to Google Fit and background service enablement, rely on user trust and cannot be directly verified.
 3. Once all the checks are marked, the bio-based trigger is turned on in the backend.
 
-### - Functionality:
+#### Functionality:
 
 Once the trigger is activated, the following processes occur:
 
 1. A non-dismissible notification is displayed on the user's system, indicating that the app is actively monitoring their health.
 2. A background service is launched to periodically check the user's bio data from Google Fit at intervals shorter than the selected frequency.
 
-### - Positive Bio Data:
+#### Positive Bio Data:
 
 When positive pulse data is detected within the specified time period, the following actions take place:
 
@@ -223,7 +223,7 @@ When positive pulse data is detected within the specified time period, the follo
 2. The backend waits for the next positive information to be sent, extending the emergency time if positive information is received.
 3. If no positive information is received within the time period, the emergency is triggered.
 
-### - No Detected Bio:
+#### No Detected Bio:
 
 If no pulse is detected within the specified time period, the following steps occur:
 
@@ -231,18 +231,18 @@ If no pulse is detected within the specified time period, the following steps oc
 2. An "Are you okay?" notification is sent, prompting the user for a response.
 3. If the user does not respond, a loud alarm is scheduled, and a notification is sent from the backend, followed by a text message.
 
-### - Pause and Nighttime Considerations:
+#### Pause and Nighttime Considerations:
 
 During pauses or nighttime periods, bio data gets checked and positive information can still be sent. However, the backend has the ability to omit processing the information while the pause time is set.
 
-### - Emergency Triggered:
+#### Emergency Triggered:
 
 Once the emergency is triggered, the following actions occur:
 
 1. Opening the app will display a modal informing the user about the emergency situation.
 2. If the emergency time has not yet arrived, the user can inform the app that they are okay, resulting in a delay of the emergency.
 3. If the information has already been sent to contacts, no further action is taken from the backend side, unless a positive status is sent again, which resets the system to its pre-emergency functioning.
-4. On the app or device side, the background service continues to be triggered and send positive status if a pulse is detected.
+4. On the app or device side, the background service continues to be active and send positive status if a pulse is detected.
 
 ### ⏰ Time-Based Trigger:
 
@@ -250,7 +250,7 @@ Once the emergency is triggered, the following actions occur:
 
 This section provides an overview of the Time-Based Trigger feature implemented in this GitHub repository. The Time-Based Trigger does not activate the background service but relies on timed notifications.
 
-### - Functionality:
+#### Functionality:
 
 The Time-Based Trigger operates as follows:
 
@@ -282,17 +282,19 @@ This section outlines the structure and organization of the project repository, 
 - **utils:** The utils directory contains utility functions or helper modules that provide common functionalities used throughout the project. These utilities serve various purposes and are typically self-explanatory in nature.
 - **services**: The services directory houses various services responsible for specific functionalities within the app. Each service performs a specific task and encapsulates the related logic and functionality.
 
-Each directory contains a ReadMe file explain the user of each module or file inside that directory. Please note that this list may not be exhaustive, but it gives an overview of the services available in the src/services directory.
+Each directory contains a README file to document the modules and files inside that directory.
+
+Please note that this list may not be exhaustive, but it gives an overview of the services available in the src/services directory.
 
 ## State Management:
 
-In this project, Redux Toolkit is utilized for managing the state of the application. The state is stored in the src/redux/store folder.
+In this project, Redux Toolkit is utilized for managing the state of the application. The state is stored in the `src/redux/store` folder.
 
-### - Redux Store:
+### Redux Store:
 
 The Redux store is the central hub for storing and managing the application state. It acts as a single source of truth, allowing components to access and modify the state. The store is configured using Redux Toolkit.
 
-### - State Persistence:
+### State Persistence:
 
 To persist the state, certain slices of the state are stored using the react-native-encrypted-storage library, specifically the EncryptedStorage module. This library provides a secure storage solution for sensitive data, ensuring that the stored state remains encrypted and protected.
 
@@ -300,16 +302,16 @@ By utilizing EncryptedStorage, the application can persist the specified slices 
 
 Please note that while the state persistence is achieved through react-native-encrypted-storage, other parts of the state that don't require encryption may be stored and managed using regular Redux functionality.
 
-## Setup wearables
+## Set Up wearables
 
-### IOS:
+### iOS:
 
-- You need to have an apple watch or other type of smart watch, connect it to your iPhone device and then open [Health app](https://www.apple.com/ios/health/) to make sure that every thing work well.
-- You can connect other watches to your health app. However, you need to install the app related to your watch and then connect it to health app. [Mi Band Example](https://govida.io/faqs/how-do-i-connect-mi-band-to-apple-health/)
+- You need to have an Apple Watch or other type of smart watch, connect it to your iPhone device and then open the [Health app](https://www.apple.com/ios/health/) to make sure that everything works well.
+- You can connect other watches to your Health app. However, you need to install the app related to your watch and then connect it to Health app. [Mi Band Example](https://govida.io/faqs/how-do-i-connect-mi-band-to-apple-health/)
 
 ### Android:
 
-The process for the android system is alittle bit complicated. We need a device that has a companion app capable to connect to Google Fit and working in the background. Not every device has this capability. Example with Mi Band 5/6:
+The process for the Android system is a little bit more complicated. We need a device that has a companion app capable to connect to Google Fit and working in the background. Not every device has this capability. Example with Mi Band 5/6:
 
 - Install the Zepp Life (formerly Mi Band) app on your Android device.
 - Open the Zepp Life app and click on the **Connect** button.
@@ -319,28 +321,28 @@ The process for the android system is alittle bit complicated. We need a device 
 - Open Zepp Life Settings and then enable **Show status in the notification bar**.
 - Go back to Biostasis app.
 - Enable Automated Emergency in the Biostasis app.
-- Enable the pulse-based trigger (is selected by default).
-- Enable the Google Fit switch and pair the BioStasis app with your Google Fit account, the same as you used in the step 4.
+- Enable the pulse-based trigger (It should be selected by default).
+- Enable the Google Fit switch and pair the Biostasis app with your Google Fit account, the same as you used in the step 4.
 - Enable the other switches (**Background modes** from step 4 and **connect app to Google Fit** from step 4).
 - You should see **System is ON** and a status in the notification bar.
 
-## Disclaimer:
+## Disclaimer
 
-1. The application uses GoogleFit and HealthKit APIs so make sure to have (android) GoogleFit - (IOS) Health accounts before using the application.
+1. The application uses GoogleFit and HealthKit APIs so make sure to have (Android) GoogleFit - (iOS) Health accounts before using the application.
 
-2. Make sure that your smart device is connected to those accounts and that you can see your health data. Some smartwatches do not send your health data directly to GoogleFit/HealthKit, So you need always to sync your health data with GoogleFit/Health apps.
+2. Make sure that your smart device is connected to those accounts and that you can see your health data. Some smart watches do not send your health data directly to GoogleFit/HealthKit, So you always need to sync your health data with GoogleFit/Health apps.
 
-3. if you are planning to use short periods (3-6-9) hours. Please, make sure:
+3. If you are planning to use short periods (3-6-9) hours. Please, make sure:
 
-- Your smart device syncs data directly to GoogleFit/HealthKit.
-- Pause the system during your sleep (if the user does not interact with their phone no new health data will be fetched).
+    - Your smart device syncs data directly to GoogleFit/HealthKit.
+    - Pause the system during your sleep (if the user does not interact with their phone no new health data will be fetched).
 
-4. Incase of a false emergency the system will turn off after contacting your emergency contacts so make sure to turn on the system again.
+4. In the case of a false emergency the system will turn off after contacting your emergency contacts so make sure to turn on the system again.
 
 5. Also, both systems work differently:
 
-- Android: run a background service that fetches data every 15 min from GoogleFit.
-- IOS: it will fetch new data every 1-2 hours and the user needs to unlock their phone (HealthHit and Apple privacy policy).
+    - Android: Runs a background service that fetches data every 15 min from GoogleFit.
+    - iOS: It will fetch new data every 1-2 hours and the user needs to unlock their phone (HealthKit and Apple privacy policy).
 
 ## License:
 
