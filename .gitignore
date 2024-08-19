@@ -20,8 +20,9 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-GoogleService-Info-debug.plist
-GoogleService-Info-prod.plist
+**/GoogleService-Info-debug.plist
+**/GoogleService-Info*.plist
+
 
 # Android/IntelliJ
 #
@@ -32,7 +33,7 @@ production/
 local.properties
 *.iml
 *.hprof
-google-services.json
+**/google-services.json
 
 # node.js
 #
@@ -69,7 +70,7 @@ keystore.properties
 .env.development
 /android/private_key.pepk
 .env.production
-
+.env*
 #Vscode
 .vscode
 .swp
